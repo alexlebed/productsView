@@ -1,0 +1,24 @@
+<div class="row slowShow">
+<div class="col-sm-offset-1 col-sm-3 col-md-offset-1 col-md-3 col-lg-offset-1 col-lg-3">
+    <form class="form-signin" ng-hide="formaHide">
+        <h2 ng-hide="formaHideAdd" class="form-signin-heading">Please Sign up</h2>
+        <h2 ng-hide="!formaHideAdd" class="form-signin-heading">Please Log in</h2>
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input ng-model="user.login" type="text" class="form-control login" placeholder="Login" autofocus="" required>
+    	<span class="loginErr errShow"></span>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="user.password" type="password" class="form-control password" placeholder="Password" required>
+    	<span class="passwordErr errShow"></span>
+
+    	<label ng-hide="formaHideAdd" for="inputPassword" class="sr-only">Password reapet</label>
+        <input ng-hide="formaHideAdd" ng-model="user.chekPassword" type="password" class="form-control password" placeholder="Password reapet" required>
+    	<span class="chekPasswordErr errShow"></span>
+
+        <button ng-hide="formaHideAdd" ng-click="postSingUp()" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+        <button ng-hide="!formaHideAdd" ng-click="postLogin()" class="btn btn-lg btn-primary btn-block" type="button">Log in</button>
+    </form>
+</div>
+</div>
+

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <title>Team</title>
+
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../node_modules/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+	
+   
+	
+
+	<script src="mainPage/SampleApp.mainPageModule.js"></script>
+    <script src="mainPage/SampleApp.mainPageCtrl.js"></script>
+
+	<script src="itemPage/SampleApp.itemPageModule.js"></script>
+    <script src="itemPage/SampleApp.itemPageCtrl.js"></script>
+	
+	<script src="app.js"></script>
+    <script src="controller/controller.js"></script>
+	
+	 <link href="css/main.css" rel="stylesheet" >
+
+</head>
+<body ng-controller="SampleAppCtrl">
+    <div ng-include="'partials/header.html'"></div>
+
+    <ng-view></ng-view>
+	
+	<div ng-include="'partials/footer.html'"></div>
+</body>
+</html>

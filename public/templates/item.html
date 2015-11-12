@@ -1,0 +1,32 @@
+<div class="container" ng-controller="itemPageCtrl">
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-xs-3 col-md-3">
+				<a href="#/logIn/{{fullItem.id}}">
+					<img ng-src="img/{{fullItem.imag}}" alt="">
+				</a>
+			</div>
+			<div class="col-xs-9 col-md-9">
+				<div class="caption">
+					<h3>{{fullItem.title}}</h3>
+					<p>{{fullItem.text}}</p>
+					<p ng-model="rate">Stars {{rate}}</p>
+				        <input type="radio" name="radius" ng-model="goods.rate" value="1" /> 1
+					    <input type="radio" name="radius" ng-model="goods.rate" value="2" /> 2
+					    <input type="radio" name="radius" ng-model="goods.rate" value="3" /> 3
+					    <input type="radio"  name="radius" ng-model="goods.rate" value="4" /> 4
+					    <input type="radio" name="radius" ng-model="goods.rate" value="5" /> 5<br>
+					<textarea ng-model="goods.text" rows="4" class="areaForComent"></textarea><br>
+					<button ng-click="addComent()"  type="button" class="btn btn-primary btn-lg btn-block">Add coment</button>
+					<h3>Coments</h3>
+					<div ng-repeat="rewiew in reviews | orderBy:'id':true">
+						<p>Stars: {{rewiew.rate}}</p>
+						<p>- {{rewiew.text}}</p>
+						<hr>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

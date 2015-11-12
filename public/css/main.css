@@ -1,0 +1,94 @@
+li {
+  list-style-type: none;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #6CC2E3;
+}
+
+.forclick {
+    cursor: pointer;
+}
+
+.linkMenu:hover {
+    background-color: #ddd;
+}
+.mycolor {
+    background-color: #434753;
+	height: 50px;
+}
+
+.logo {
+  background-image: url("../img/logo.png");
+  width: 187px;
+  height: 40px;
+  position: relative;
+  top: -8px;
+}
+
+.searcher {
+    width: 330px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: 1px solid #000;
+    box-shadow: 3px 3px 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.textFooterColor {
+	position: relative;
+	top: 15px;
+}
+
+
+@media screen and (max-width: 768px){
+	.myFooter {
+	    height: 60px;
+	}
+	
+	.textFooterColor {
+		top: 0;
+	}
+}
+
+.errShow {
+    display: none;
+}
+
+.slowShow {
+    margin-bottom: 10px;
+    position: relative;
+    top:0;
+    left:0;
+  -webkit-animation-name: my;
+          animation-name: my;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes my {
+  0% {
+    top: -1000px;
+  }
+}
+
+@keyframes my {
+  0% {
+    top: -1000px;
+  }
+} 
+
+.areaForComent {
+    width: 100%;
+}
+
+.userName {
+    position: relative;
+    top: 4px;
+}
+
