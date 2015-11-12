@@ -43,15 +43,19 @@
 			};
 
 			$scope.addComent = function() {
-				$scope.reviews.push($scope.goods);
-				console.log($scope.goods);
-				$http.post('/reviews/' + $routeParams.id, $scope.goods).then(function successCallback(response) {
+				if(!$scope.goods.rate) {
+					$('.makeRate').text('Please vote').css({'display': 'block', 'color': 'red'});
+				} else {
+					$('.makeRate').css({'display': 'none'});
+					$scope.reviews.push($scope.goods);
+				
+				    $http.post('/reviews/' + $routeParams.id, $scope.goods).then(function successCallback(response) {
 		                var response = response.data;
 					}, function errorCallback(err) {
 						console.log('error: ' + err);
 					});
-				$scope.goods = {};
+				    $scope.goods = {};
+			    }
 			}
-
         }]);
 })();
